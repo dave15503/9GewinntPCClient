@@ -1,0 +1,128 @@
+﻿<Window x:Class="_9GPCClient.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_9GPCClient"
+        mc:Ignorable="d"
+        Title="9 Gewinnt Windows Client" 
+        Height="900" 
+        Width="1200"
+        ResizeMode="NoResize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="900"/>
+            <ColumnDefinition Width="300"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0" Name="pnlGame" Background="Transparent">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid Name="pnlGameOverlay" Grid.Row="0" Grid.Column="0" Grid.RowSpan="9" Grid.ColumnSpan="9" Panel.ZIndex="-10">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+            </Grid>
+        </Grid>
+
+        <StackPanel Grid.Row="0" Grid.Column="1" Name="pnlData">
+            <Label FontSize="20" HorizontalAlignment="Center" Margin="5" Foreground="BlueViolet">9 Gewinnt Windows Client</Label>
+            <Label Name="lblCurrentPlayer"></Label>
+            <StackPanel>
+                <Border BorderThickness="2" BorderBrush="Black" Margin="0, 5">
+                    <StackPanel>
+
+                        <Button VerticalAlignment="Center" HorizontalAlignment="Center" Padding="5" Margin="0, 3, 0, 3" Name="btnNewGame" Click="btnNewGame_Click">
+                            Neues Spiel Starten
+                        </Button>
+                        <Label>
+                            Token:
+                        </Label>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="9*"/>
+                                <ColumnDefinition Width="1.5*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBox Padding="3.4, 0, 0, 0" IsReadOnly="True" BorderThickness="0" FontSize="12" Foreground="Gray" Name="txtTokenOutput">token</TextBox>
+                            <Button Grid.Column="1" HorizontalAlignment="Stretch"  Margin="1.5, 1.5, 15, 1.5" Name="btnCopyTokenToClipboard" Background="White" Click="btnCopyTokenToClipboard_Click">
+                                <Image Source="CopyIcon.bmp" Width="17" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                    
+                                </Image>
+                            </Button>
+                        </Grid>
+                        
+
+                    </StackPanel>
+                </Border>
+                
+                <Border BorderThickness="2" BorderBrush="Black">
+                    <StackPanel>
+                        <Label>Token:</Label>
+                        <TextBox Name="txtTokenInput"></TextBox>
+                        <Button HorizontalAlignment="Center" Padding="5" Margin="0,3,0,3" Name="btnConnectToGame" Click="btnConnectToGame_Click">
+                            Mit Spiel verbinden
+                        </Button>
+                    </StackPanel>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Margin="0,5">
+                    <StackPanel>
+                        <Button HorizontalAlignment="Center" VerticalAlignment="Center" Padding="5" Margin="3" Name="btnEndGame" Click="btnEndGame_Click"> Spiel Beenden</Button>
+                    </StackPanel>
+                </Border>
+                <Label FontSize="14">
+                    Status:
+                </Label>
+                <Label Name="lblPending" Foreground="Gray">Status</Label>
+                <Label FontSize="14">
+                    Spieler am Zug:
+                </Label>
+                <Label Name ="lblTurn" Foreground="Gray">Jemand</Label>
+                <Label FontSize="14">
+                    Aktuelle Sektion
+                </Label>
+                <Label Name="lblSection" Foreground="Gray">Freie Wahl</Label>
+                
+            </StackPanel>
+            <Label FontSize="13">Ausgabe:</Label>
+            <ScrollViewer HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="370">
+                <StackPanel Name="pnlPrompt" VerticalAlignment="Bottom">
+
+                </StackPanel>
+            </ScrollViewer>
+            
+           
+        </StackPanel>
+        
+    </Grid>
+</Window>
