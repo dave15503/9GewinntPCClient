@@ -9,7 +9,7 @@ Programmierung:
 _David "dave15503" Schuberth_
 
 Beta Tester:  
-_Joshua Matthes_
+_Joshua Matthes_  
 _Nico Goller_
 
 # License 
