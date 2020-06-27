@@ -3,6 +3,7 @@ Windows Desktop Client um mithilfe des Backends zu zweit online 9 Gewinnt zu spi
 
 
 Copyright 2020 dave15503
+
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
    You may obtain a copy of the License at
