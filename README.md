@@ -1,5 +1,5 @@
 # 9GewinntPCClient
-Windows Desktop Client um mithilfe des Backends zu zweit online 9 Gewinnt zu spielen
+Billo-Implementierung eines extrem schmerzhaft Hardgecodeten Frontends ohne richtige Engine mit Bugs ohne Ende um 9Gewinnt online zusammen spielen zu können
 
 # Credits
 Idee:  
