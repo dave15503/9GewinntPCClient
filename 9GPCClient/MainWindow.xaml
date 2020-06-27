@@ -115,13 +115,14 @@
                 
             </StackPanel>
             <Label FontSize="13">Ausgabe:</Label>
-            <ScrollViewer HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="370">
+            <ScrollViewer HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="350">
                 <StackPanel Name="pnlPrompt" VerticalAlignment="Bottom">
 
                 </StackPanel>
             </ScrollViewer>
-            
-           
+            <Button Name="btnCredits" Padding="3" HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="btnCredits_Click">
+                Credits
+            </Button>
         </StackPanel>
         
     </Grid>

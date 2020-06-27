@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_9GPCClient"
         mc:Ignorable="d"
-        Title="Einmalig Registrieren" Height="250" Width="300">
+        Title="Einmalig Registrieren" Height="280" Width="300">
     <StackPanel>
         <Label HorizontalAlignment="Center" FontSize="20"> Registrierung:</Label>
         <Label> Nutzername:</Label>
@@ -16,7 +16,7 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <Label>Passwort</Label>
-            <Label Grid.Column="1" Content="ℹ" ToolTip="Passwort wird lokal gespeichert und muss nie wieder eingegeben werden. Um Sicherheitsrisiken zu umgehen einfach irgendetwas eingeben ;)">
+            <Label Grid.Column="1" Content="ℹ" ToolTip="Passwort wird lokal gespeichert und muss nie wieder eingegeben werden. Um Sicherheitsrisiken zu umgehen einfach irgendetwas eingeben ;)" MouseDoubleClick="lblPsswdTooltip_MouseDoubleClick">
             </Label>
         </Grid>
         <TextBox Margin="5" BorderThickness="1" BorderBrush="Black" Name="txtPassword"></TextBox>

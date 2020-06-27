@@ -5,6 +5,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Diagnostics;
+using System;
 
 namespace _9GPCClient
 {
@@ -33,6 +34,17 @@ namespace _9GPCClient
         {
             Process.Start(new ProcessStartInfo(e.Uri.AbsoluteUri));
             e.Handled = true;
+        }
+
+        private void lblPsswdTooltip_MouseDoubleClick(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            // Zufälliges Passwort generieren
+            Random rndm = new Random();
+            int length = rndm.Next(16, 26);
+            byte[] psswdBuff = new byte[length];
+            rndm.NextBytes(psswdBuff);
+            txtPassword.Text = Convert.ToBase64String(psswdBuff);
+
         }
 
         private async Task registerRequest()

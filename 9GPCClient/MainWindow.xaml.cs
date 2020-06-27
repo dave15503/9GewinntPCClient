@@ -695,6 +695,11 @@ namespace _9GPCClient
             Clipboard.SetText(txtTokenOutput.Text);
         }
 
+        private void btnCredits_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Idee:\n\tVictoria Ruff\nProgrammierung:\n\tDavid Schuberth\nBetatester:\n\tJoshua Matthes\n\tNico Goller", "Credits");
+        }
+
         private int calculateSection(int fieldX, int fieldY)
         {
             if (fieldX < 3 && fieldY < 3) return 0;

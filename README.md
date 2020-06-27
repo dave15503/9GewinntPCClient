@@ -8,6 +8,10 @@ _Victoria Ruff_
 Programmierung:  
 _David "dave15503" Schuberth_
 
+Beta Tester:  
+_Joshua Matthes_
+_Nico Goller_
+
 # License 
 
 Copyright 2020 dave15503
