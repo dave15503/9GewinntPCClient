@@ -10,8 +10,22 @@
         <Label HorizontalAlignment="Center" FontSize="20"> Registrierung:</Label>
         <Label> Nutzername:</Label>
         <TextBox Margin="5" BorderThickness="1" BorderBrush="Black" Name="txtUsername"></TextBox>
-        <Label> Passwort</Label>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="9*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label>Passwort</Label>
+            <Label Grid.Column="1" Content="ℹ" ToolTip="Passwort wird lokal gespeichert und muss nie wieder eingegeben werden. Um Sicherheitsrisiken zu umgehen einfach irgendetwas eingeben ;)">
+            </Label>
+        </Grid>
         <TextBox Margin="5" BorderThickness="1" BorderBrush="Black" Name="txtPassword"></TextBox>
+        <CheckBox x:Name="chbxAcceptDSGVO" Content="Ich akzeptiere die Datenschutzerklärung"/>
+        <Label>
+            <Hyperlink NavigateUri="http://davetestserver.bplaced.net/9Gewinnt/DSGVO.xhtml" RequestNavigate="Hyperlink_RequestNavigate">
+                Link zur Datenschutzerklärung
+            </Hyperlink>
+        </Label>
         <Button Padding="12, 5, 12, 5" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="15" Margin="0, 20, 0, 0" Name="btnSubmit" Click="btnSubmit_Click">Absenden</Button>
     </StackPanel>
 </Window>

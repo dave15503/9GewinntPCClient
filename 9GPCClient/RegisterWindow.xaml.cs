@@ -29,8 +29,20 @@ namespace _9GPCClient
             registerRequest(); // lieber auf den asynchronen thread warten, freezt das UI so schön... hach
         }
 
+        private void Hyperlink_RequestNavigate(object sender, System.Windows.Navigation.RequestNavigateEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo(e.Uri.AbsoluteUri));
+            e.Handled = true;
+        }
+
         private async Task registerRequest()
         {
+
+            if (chbxAcceptDSGVO.IsChecked == null || chbxAcceptDSGVO.IsChecked == false)
+            {
+                MessageBox.Show("Datenschutzerklärung muss akzeptiert werden um die Applikation verwenden zu können");
+                return;
+            }
 
             // HttpRequest an die API
             Dictionary<string, string> param = new Dictionary<string, string>();
