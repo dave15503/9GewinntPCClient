@@ -2,11 +2,11 @@
 Windows Desktop Client um mithilfe des Backends zu zweit online 9 Gewinnt zu spielen
 
 # Credits
-Idee
-   Victoria Ruff
+Idee:  
+_Victoria Ruff_
 
-Programmierung
-   David "dave15503" Schuberth
+Programmierung:  
+_David "dave15503" Schuberth_
 
 # License 
 
