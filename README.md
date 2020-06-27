@@ -1,6 +1,13 @@
 # 9GewinntPCClient
 Windows Desktop Client um mithilfe des Backends zu zweit online 9 Gewinnt zu spielen
 
+# Credits
+Idee
+   Victoria Ruff
+
+Programmierung
+   David "dave15503" Schuberth
+
 # License 
 
 Copyright 2020 dave15503
